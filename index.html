@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport -->
     <title>Math Quiz Game</title>
     <style>
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: Arial, sans-serif;
             text-align: center;
             background-color: #ffecb3;
             margin: 0;
@@ -57,7 +57,7 @@
         }
 
         #question {
-            font-size: 2.5em; /* Increased font size */
+            font-size: 2.5em;
             color: #ff9800;
             margin-bottom: 20px;
         }
@@ -70,7 +70,7 @@
             border: 2px solid #ff9800;
             border-radius: 8px;
             text-align: center;
-            margin-bottom: 20px; /* Added margin to separate from submit button */
+            margin-bottom: 20px;
         }
 
         #feedback {
@@ -83,7 +83,7 @@
             background-color: green;
             color: white;
             display: none;
-            margin: 20px auto; /* Center align the button */
+            margin: 20px auto;
         }
 
         #newGameButton:hover {
@@ -128,7 +128,7 @@
         .high-score, .last-score {
             font-size: 1.2em;
             margin-top: 5px;
-            display: none; /* Hide high scores on welcome and game pages */
+            display: none;
         }
 
         .level-container {
@@ -173,18 +173,56 @@
         }
 
         #submit {
-            background-color: #f85088;
+            background-color: #ff4081;
             color: white;
-            margin-top: 10px; /* Added margin to separate from input box */
+            margin-top: 10px;
         }
 
         #submit:hover {
             background-color: #e91e63;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em; /* Smaller font size for mobile */
+            }
+
+            button {
+                font-size: 1em; /* Smaller buttons for mobile */
+                padding: 10px 20px;
+            }
+
+            #question {
+                font-size: 1.5em; /* Smaller question font for mobile */
+            }
+
+            input {
+                font-size: 1em; /* Smaller input font for mobile */
+                width: 90%; /* Wider input for mobile */
+            }
+
+            #feedback {
+                font-size: 1.2em; /* Smaller feedback font for mobile */
+            }
+
+            .level-container {
+                flex-direction: column; /* Stack level buttons and scores vertically */
+                gap: 10px;
+            }
+
+            .level-button {
+                width: 100%; /* Full width buttons for mobile */
+            }
+
+            .score-container {
+                text-align: center; /* Center align scores for mobile */
+            }
+        }
     </style>
 </head>
 <body>
-    <h1 id="welcomeMessage">Welcome Little Masfiya! 🥰</h1>
+    <h1 id="welcomeMessage">Welcome to Little Masfiya! 🥰</h1>
     <button id="startGame">Start Game</button>
 
     <div id="levelSelection">
