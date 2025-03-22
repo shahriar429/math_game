@@ -227,16 +227,19 @@
             }
 
             .level-container {
-                flex-direction: column; /* Stack level buttons and scores vertically */
+                flex-direction: row; /* Keep level buttons and scores in a row */
+                flex-wrap: wrap; /* Wrap to next line if needed */
                 gap: 10px;
+                justify-content: center; /* Center align items */
             }
 
             .level-button {
-                width: 100%; /* Full width buttons for mobile */
+                width: 45%; /* Smaller buttons for mobile */
             }
 
             .score-container {
                 text-align: center; /* Center align scores for mobile */
+                width: 45%; /* Smaller score containers */
             }
         }
     </style>
