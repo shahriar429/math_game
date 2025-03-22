@@ -6,7 +6,7 @@
     <title>Math Quiz Game</title>
     <style>
         body {
-            font-family: Arial, sans-serif; /* Normal font */
+            font-family: Arial, sans-serif;
             text-align: center;
             background-color: #ffecb3;
             margin: 0;
@@ -49,13 +49,11 @@
             border-radius: 15px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             max-width: 90%;
-            width: 90%; /* Full width for better use of space */
             margin: auto;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            text-align: center; /* Center align content */
         }
 
         #question {
@@ -67,26 +65,18 @@
         input {
             font-size: 1.2em;
             padding: 10px;
-            width: 80%; /* Adjusted width */
-            max-width: 300px; /* Increased max-width */
+            width: 80%;
+            max-width: 200px;
             border: 2px solid #ff9800;
             border-radius: 8px;
             text-align: center;
             margin-bottom: 20px;
         }
 
-        #submit {
-            background-color: #ff4081;
-            color: white;
-            margin-top: 10px;
-            width: 80%; /* Match input width */
-            max-width: 300px; /* Match input max-width */
-            padding: 10px;
-        }
-
-        #score, #timer {
+        #feedback {
             font-size: 1.5em;
-            margin: 10px 0;
+            font-weight: bold;
+            margin-top: 10px;
         }
 
         #newGameButton {
@@ -94,9 +84,10 @@
             color: white;
             display: none;
             margin: 20px auto;
-            width: 80%; /* Match input width */
-            max-width: 300px; /* Match input max-width */
-            padding: 10px;
+        }
+
+        #newGameButton:hover {
+            background-color: darkgreen;
         }
 
         .level-button {
@@ -181,21 +172,25 @@
             background-color: #e91e63;
         }
 
+        #submit {
+            background-color: #ff4081;
+            color: white;
+            margin-top: 10px;
+        }
+
+        #submit:hover {
+            background-color: #e91e63;
+        }
+
         /* Mobile Responsive Styles */
         @media (max-width: 600px) {
             h1 {
-                font-size: 1.5em; /* Smaller font size for mobile */
+                font-size: 2em; /* Smaller font size for mobile */
             }
 
             button {
-                font-size: 1.3em; /* Smaller buttons for mobile */
+                font-size: 1em; /* Smaller buttons for mobile */
                 padding: 10px 20px;
-            }
-
-            #questionContainer {
-                width: 80%; /* Full width for mobile */
-                padding: 20px; /* Less padding for mobile */
-                max-width: 80%; /* Remove max-width restriction */
             }
 
             #question {
@@ -204,42 +199,24 @@
 
             input {
                 font-size: 1em; /* Smaller input font for mobile */
-                width: 80%; /* Wider input for mobile */
-                max-width: 80%; /* Remove max-width restriction */
+                width: 90%; /* Wider input for mobile */
             }
 
-            #submit {
-                font-size: 1em; /* Smaller button font for mobile */
-                width: 90%; /* Match input width */
-                max-width: 90%; /* Remove max-width restriction */
-                padding: 10px; /* Adjust padding */
-            }
-
-            #score, #timer {
-                font-size: 1.2em; /* Smaller font size for mobile */
-            }
-
-            #newGameButton {
-                font-size: 1em; /* Smaller button font for mobile */
-                width: 90%; /* Match input width */
-                max-width: 100%; /* Remove max-width restriction */
-                padding: 10px; /* Adjust padding */
+            #feedback {
+                font-size: 1.2em; /* Smaller feedback font for mobile */
             }
 
             .level-container {
-                flex-direction: row; /* Keep level buttons and scores in a row */
-                flex-wrap: wrap; /* Wrap to next line if needed */
-                gap: 15px;
-                /* Center align items */
+                flex-direction: column; /* Stack level buttons and scores vertically */
+                gap: 10px;
             }
 
             .level-button {
-                width: 45%; /* Smaller buttons for mobile */
+                width: 100%; /* Full width buttons for mobile */
             }
 
             .score-container {
                 text-align: center; /* Center align scores for mobile */
-                width: 45%; /* Smaller score containers */
             }
         }
     </style>
